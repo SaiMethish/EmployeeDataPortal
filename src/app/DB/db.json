@@ -7,18 +7,8 @@
       "password": "1234",
       "mobileNumber": "123456789",
       "Department": "tech",
-      "isAdmin": "true",
+      "isAdmin": true,
       "id": "db28"
-    },
-    {
-      "id": "58b3",
-      "name": "methish",
-      "age": 21,
-      "mobileNumber": null,
-      "department": "tech",
-      "isAdmin": false,
-      "email": "m@gmail.com",
-      "password": "pass"
     },
     {
       "id": "7733",
@@ -28,6 +18,16 @@
       "department": "tech",
       "isAdmin": false,
       "email": "me@gmail.com",
+      "password": "pass"
+    },
+    {
+      "id": "9baf",
+      "name": "user4",
+      "age": 22,
+      "mobileNumber": 123456789,
+      "department": "HR",
+      "isAdmin": false,
+      "email": "user4@gmail.com",
       "password": "pass"
     }
   ]

@@ -27,7 +27,8 @@ export class LoginComponent implements OnInit {
           if(i.email===this.loginForm.get('email')?.value && i.password===this.loginForm.get("password")?.value){
             console.log(i);
             localStorage.setItem("user",JSON.stringify(i));
-            this.router.navigate(['/dashboard']);
+            if(i.isAdmin===false) this.router.navigate(['/dashboard']);
+            else this.router.navigate(['/admin']);
             
           }
         })

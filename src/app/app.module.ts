@@ -12,6 +12,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { DashboardAdminComponent } from './components/dashboard-admin/dashboard-admin.component';
+import { DetailscardComponent } from './components/detailscard/detailscard.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +20,8 @@ import { DashboardAdminComponent } from './components/dashboard-admin/dashboard-
     LoginComponent,
     NavbarComponent,
     DashboardComponent,
-    DashboardAdminComponent
+    DashboardAdminComponent,
+    DetailscardComponent
   ],
   imports: [
     BrowserModule,

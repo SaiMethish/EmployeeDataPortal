@@ -11,13 +11,15 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { DashboardAdminComponent } from './components/dashboard-admin/dashboard-admin.component';
 @NgModule({
   declarations: [
     AppComponent,
     SignUpComponent,
     LoginComponent,
     NavbarComponent,
-    DashboardComponent
+    DashboardComponent,
+    DashboardAdminComponent
   ],
   imports: [
     BrowserModule,

@@ -25,9 +25,11 @@ export class LoginComponent implements OnInit {
       next:(res:any)=>{
         res.forEach((i:any)=>{
           if(i.email===this.loginForm.get('email')?.value && i.password===this.loginForm.get("password")?.value){
+            console.log(i);
+            localStorage.setItem("user",JSON.stringify(i));
             this.router.navigate(['/dashboard']);
+            
           }
-          else console.log("unauthorized");
         })
       },
       error:(err)=>console.log(err),

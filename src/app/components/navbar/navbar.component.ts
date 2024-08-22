@@ -8,8 +8,17 @@ import { Component, OnInit } from '@angular/core';
 export class NavbarComponent implements OnInit {
 
   constructor() { }
-
+  email:string='';
   ngOnInit(): void {
+    let user:any=localStorage.getItem("user");
+    if(user==null){
+      user='';
+    }
+    else{
+      user=JSON.parse(user);
+      this.email=user.email;
+    }
+
   }
 
 }

@@ -28,7 +28,7 @@ export class SignUpComponent implements OnInit {
     let user:User={
       name:this.signupForm.get("name")?.value,
       age:parseInt(this.signupForm.get("age")?.value),
-      mobileNumber:parseInt(this.signupForm.get("mobileNumbr")?.value),
+      mobileNumber:parseInt(this.signupForm.get("mobileNumber")?.value),
       department:this.signupForm.get("department")?.value,
       isAdmin:false,
       email:this.signupForm.get("email")?.value,

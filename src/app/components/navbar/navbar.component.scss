@@ -1,0 +1,26 @@
+mat-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 15%;
+  }
+  
+  .logo img {
+    height: 40px;
+  }
+  
+  .spacer {
+    flex: 1;
+  }
+  
+  .user-email {
+    margin-right: 10px;
+  }
+  
+mat-form-field{
+    width: 100%;
+    bottom: 40px;
+    mat-icon{
+        margin-right: 20px;
+    }
+}

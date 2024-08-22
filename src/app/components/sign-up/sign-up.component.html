@@ -1,1 +1,35 @@
-<p>sign-up works!</p>
+<mat-card class="signUp">
+    <mat-card-title>Sign Up</mat-card-title>
+    <mat-card-content [formGroup]="signupForm">
+        <mat-form-field appearance="fill">
+          <mat-label>Name</mat-label>
+          <input matInput name="name" required formControlName="name">
+        </mat-form-field>
+  
+        <mat-form-field appearance="fill">
+          <mat-label>Age</mat-label>
+          <input matInput type="number" name="age" required formControlName="age">
+        </mat-form-field>
+  
+        <mat-form-field appearance="fill">
+          <mat-label>Role</mat-label>
+          <input matInput name="role" required formControlName="role">
+        </mat-form-field>
+  
+        <mat-form-field appearance="fill">
+          <mat-label>Mobile Number</mat-label>
+          <input matInput type="tel" name="mobile" required formControlName="mobileNumber">
+        </mat-form-field>
+  
+        <div class="department">
+          <label>Department</label>
+          <mat-radio-group name="department" formControlName="department" >
+            <mat-radio-button value="HR">HR</mat-radio-button>
+            <mat-radio-button value="Engineering">Engineering</mat-radio-button>
+          </mat-radio-group>
+        </div>
+  
+        <button (click)="submitForm()"  mat-raised-button color="primary" type="submit">Sign Up</button>
+    </mat-card-content>
+  </mat-card>
+  

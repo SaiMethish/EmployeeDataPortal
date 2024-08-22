@@ -13,6 +13,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { DashboardAdminComponent } from './components/dashboard-admin/dashboard-admin.component';
 import { DetailscardComponent } from './components/detailscard/detailscard.component';
+import { SearchPipe } from './services/pipes/search.pipe';
+import { DataPipe } from './service/data/data.pipe';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +23,9 @@ import { DetailscardComponent } from './components/detailscard/detailscard.compo
     NavbarComponent,
     DashboardComponent,
     DashboardAdminComponent,
-    DetailscardComponent
+    DetailscardComponent,
+    SearchPipe,
+    DataPipe
   ],
   imports: [
     BrowserModule,

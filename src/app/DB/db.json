@@ -29,6 +29,16 @@
       "isAdmin": false,
       "email": "user4@gmail.com",
       "password": "pass"
+    },
+    {
+      "id": "b26b",
+      "name": "user6",
+      "age": 21,
+      "mobileNumber": 123456789,
+      "department": "tech",
+      "isAdmin": false,
+      "email": "user6@gmail.com",
+      "password": "pass"
     }
   ]
 }

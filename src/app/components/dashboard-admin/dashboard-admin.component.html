@@ -1,7 +1,7 @@
 <app-navbar></app-navbar>
 
 <div class="dashboard" >
-    <div *ngFor="let i of userList">
+    <div *ngFor="let i of userList" style="height: 100%;">
         <app-detailscard [user]="i"></app-detailscard>
     </div>
 </div>

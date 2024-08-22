@@ -1,0 +1,13 @@
+import { Injectable } from '@angular/core';
+import { HttpService } from '../http/http.service';
+@Injectable({
+  providedIn: 'root'
+})
+export class UserService {
+  baseurl='/users'
+  constructor(private httpService:HttpService) { }
+
+  signUp=(url:any,data:any)=>{
+    return this.httpService.postService(this.baseurl+url,data);
+  }
+}

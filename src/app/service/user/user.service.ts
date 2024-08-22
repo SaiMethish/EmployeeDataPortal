@@ -10,4 +10,8 @@ export class UserService {
   signUp=(url:any,data:any)=>{
     return this.httpService.postService(this.baseurl+url,data);
   }
+
+  login=(url:any)=>{
+    return this.httpService.getService(this.baseurl+url);
+  }
 }

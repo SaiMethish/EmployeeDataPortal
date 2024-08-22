@@ -1,4 +1,23 @@
 {
   "users": [
+    {
+      "name": "admin1",
+      "age": 20,
+      "email": "admin@gmail.com",
+      "password": "1234",
+      "mobileNumber": "123456789",
+      "Department": "tech",
+      "isAdmin": "true"
+    },
+    {
+      "id": "58b3",
+      "name": "methish",
+      "age": 21,
+      "mobileNumber": null,
+      "department": "tech",
+      "isAdmin": false,
+      "email": "m@gmail.com",
+      "password": "pass"
+    }
   ]
 }

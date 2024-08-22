@@ -15,4 +15,8 @@ export class HttpService {
   getService=(url:any)=>{
     return this.httpClient.get(this.baseUrl+url);
   }
+
+  deleteService=(url:any)=>{
+    return this.httpClient.delete(this.baseUrl+url);
+  }
 }

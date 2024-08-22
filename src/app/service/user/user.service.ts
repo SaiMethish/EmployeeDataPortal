@@ -14,4 +14,12 @@ export class UserService {
   login=(url:any)=>{
     return this.httpService.getService(this.baseurl+url);
   }
+
+  getUserList=(url:any)=>{
+    return this.httpService.getService(this.baseurl+url);
+  }
+
+  deleteUser=(id:any)=>{
+    return this.httpService.deleteService(this.baseurl+'/'+id);
+  }
 }

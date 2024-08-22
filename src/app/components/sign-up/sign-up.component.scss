@@ -1,8 +1,9 @@
 .signUp{
   margin: auto;
   width: 30%;
-  height: 73%;
+  height: 63%;
   top: 10%;
+  text-align: center;
 
   mat-card-content{
     margin-top: 5%;
@@ -28,6 +29,13 @@
     }
     button{
       margin-top: 10%;
+    }
+  }
+  .buttons{
+    display: flex;
+    justify-content: space-around;
+    *{
+      width: 40%;
     }
   }
 }

@@ -1,2 +1,7 @@
 <app-navbar></app-navbar>
 
+<div class="dashboard" >
+    <div *ngFor="let i of userList">
+        <app-detailscard [user]="i"></app-detailscard>
+    </div>
+</div>

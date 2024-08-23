@@ -9,33 +9,37 @@ import { UserService } from 'src/app/service/user/user.service';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-  loginForm!:FormGroup;
-  constructor(private fb:FormBuilder, private userService:UserService, private router:Router) { }
+  loginForm!: FormGroup;
+  constructor(private fb: FormBuilder, private userService: UserService, private router: Router) { }
 
   ngOnInit(): void {
-    this.loginForm=this.fb.group({
-      email:[''],
-      password:['']
+    this.loginForm = this.fb.group({
+      email: ['',Validators.required],
+      password: ['',Validators.required]
     })
   }
 
-  login=()=>{
-    console.log(this.loginForm.value);
-    this.userService.login('/').subscribe({
-      next:(res:any)=>{
-        res.forEach((i:any)=>{
-          if(i.email===this.loginForm.get('email')?.value && i.password===this.loginForm.get("password")?.value){
-            console.log(i);
-            localStorage.setItem("user",JSON.stringify(i));
-            if(i.isAdmin===false) this.router.navigate(['/dashboard']);
-            else this.router.navigate(['/admin']);
-            
-          }
-        })
-      },
-      error:(err)=>console.log(err),
-      complete:()=>{}
-    })
+  login = () => {
+    if (!this.loginForm.valid) console.log("enter valid details");
+    else {
+      console.log(this.loginForm.value);
+      this.userService.login('/').subscribe({
+        next: (res: any) => {
+          res.forEach((i: any) => {
+            if (i.email === this.loginForm.get('email')?.value && i.password === this.loginForm.get("password")?.value) {
+              console.log(i);
+              localStorage.setItem("user", JSON.stringify(i));
+              if (i.isAdmin === false) this.router.navigate(['/dashboard']);
+              else this.router.navigate(['/admin']);
+
+            }
+          })
+        },
+        error: (err) => console.log(err),
+        complete: () => { }
+      })
+    }
+
   }
 
 }

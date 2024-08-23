@@ -11,7 +11,14 @@ export class DetailscardComponent implements OnInit {
   isAdmin:Boolean=false;
   constructor(private userService:UserService) { }
   ngOnInit(): void {
-    if(this.user.isAdmin==="true") this.isAdmin=true;
+    let user:any=localStorage.getItem("user");
+    if(user==null){
+      user='';
+    }
+    else{
+      user=JSON.parse(user);
+      this.isAdmin=user.isAdmin;
+    }
   }
 
   deleteUser=()=>{

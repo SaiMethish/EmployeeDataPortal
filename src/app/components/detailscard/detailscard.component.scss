@@ -1,5 +1,6 @@
-mat-card{
-    background-color: wheat;
+/* Default styles */
+mat-card {
+    background-color: #f5f5f5f5;
     margin: 2%;
     padding: 2%;
     width: 55%;
@@ -8,7 +9,74 @@ mat-card{
     flex-direction: column;
     justify-content: space-evenly;
     margin-left: 10%;
-    *{
-        margin-left: 1%;
+    word-wrap: break-word;
+}
+
+mat-card * {
+    margin-left: 1%;
+}
+
+.dashboard {
+    margin-top: 5%;
+    margin-left: 5%;
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    width: 80%;
+    height: auto;
+}
+
+/* Styles for small devices (phones, portrait) */
+@media only screen and (max-width: 600px) {
+    mat-card {
+        width: 80%;
+        margin-left: 5%;
+        padding: 1%;
+        font-size: 0.9em;
+        height: auto;
+    }
+
+    mat-card * {
+        margin:3%; /* Add some space between elements */
+    }
+}
+
+/* Styles for medium devices (tablets, landscape) */
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+
+
+    mat-card {
+        width: 80%;
+        margin-left: 10%;
+        height: auto;
+        width: auto;
+        *{
+            padding: 2%;
+        }
+    }
+}
+
+/* Styles for large devices (desktops) */
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+    mat-card {
+        width: 100%;
+        margin-left: 15%;
+        margin: 3%;
+        height: auto;
+        width: auto;
+        padding: 2%;
+        *{
+            margin: 2%;
+            padding: 2%;
+        }
+    }
+}
+
+/* Styles for extra large devices (large desktops) */
+@media only screen and (min-width: 992px) {
+
+
+    mat-card {
+        width: 90%;
+        margin-left: 10%;
     }
 }

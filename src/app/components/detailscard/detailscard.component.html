@@ -1,8 +1,8 @@
 <mat-card>
-        <p>{{user.name}}</p>
-        <p>{{user.age}}</p>
-        <p>{{user.email}}</p>
-        <p>{{user.mobileNumber}}</p>
-        <p>{{user.department}}</p>
-        <button *ngIf="!isAdmin" mat-raised-button (click)="deleteUser()">delete</button>
+        <p><strong>NAME: </strong> {{user.name}}</p>
+        <p><strong>AGE: </strong> {{user.age}}</p>
+        <p><strong>EMAIL: </strong> {{user.email}}</p>
+        <p><strong>MOBILENUMBER: </strong>{{user.mobileNumber}}</p>
+        <p><strong>DEPARTMENT: </strong> {{user.department}}</p>
+        <button *ngIf="isAdmin" mat-raised-button (click)="deleteUser()">Delete</button>
 </mat-card>

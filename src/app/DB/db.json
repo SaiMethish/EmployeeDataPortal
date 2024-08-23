@@ -11,16 +11,6 @@
       "id": "db28"
     },
     {
-      "id": "7733",
-      "name": "methish",
-      "age": 21,
-      "mobileNumber": 123454884283288,
-      "department": "tech",
-      "isAdmin": false,
-      "email": "me@gmail.com",
-      "password": "pass"
-    },
-    {
       "id": "9baf",
       "name": "user4",
       "age": 22,
@@ -38,6 +28,16 @@
       "department": "tech",
       "isAdmin": false,
       "email": "user6@gmail.com",
+      "password": "pass"
+    },
+    {
+      "id": "560e",
+      "name": "user7",
+      "age": 21,
+      "mobileNumber": 123456789,
+      "department": "tech",
+      "isAdmin": false,
+      "email": "user7@gmail.com",
       "password": "pass"
     }
   ]

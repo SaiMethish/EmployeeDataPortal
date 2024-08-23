@@ -14,34 +14,37 @@ export class SignUpComponent implements OnInit {
 
   ngOnInit(): void {
     this.signupForm=this.fb.group({
-      name:[''],
-      age:[''],
-      mobileNumber:[''],
-      department:[''],
-      email:[''],
-      password:['']
+      name:['',Validators.required],
+      age:['',Validators.required],
+      mobileNumber:['',Validators.required],
+      department:['',Validators.required],
+      email:['',Validators.required],
+      password:['',Validators.required]
     })
   
   }
 
   submitForm=()=>{
-    let user:User={
-      name:this.signupForm.get("name")?.value,
-      age:parseInt(this.signupForm.get("age")?.value),
-      mobileNumber:parseInt(this.signupForm.get("mobileNumber")?.value),
-      department:this.signupForm.get("department")?.value,
-      isAdmin:false,
-      email:this.signupForm.get("email")?.value,
-      password:this.signupForm.get("password")?.value
-    };
-    this.userService.signUp('/',user).subscribe({
-      next:(res:any)=>{
-        console.log(res);
-        this.router.navigate(['/login']);
-      },
-      error:err=>console.log(err),
-      complete:()=>{}
-    })
+    if(!this.signupForm.valid) {console.log("enter details");}
+    else{
+      let user:User={
+        name:this.signupForm.get("name")?.value,
+        age:parseInt(this.signupForm.get("age")?.value),
+        mobileNumber:parseInt(this.signupForm.get("mobileNumber")?.value),
+        department:this.signupForm.get("department")?.value,
+        isAdmin:false,
+        email:this.signupForm.get("email")?.value,
+        password:this.signupForm.get("password")?.value
+      };
+      this.userService.signUp('/',user).subscribe({
+        next:(res:any)=>{
+          console.log(res);
+          this.router.navigate(['/login']);
+        },
+        error:err=>console.log(err),
+        complete:()=>{}
+      })
+    }
 
   }
 }

@@ -1,7 +1,7 @@
 <app-navbar></app-navbar>
 
 <div class="dashboard" >
-    <div *ngFor="let i of userList">
+    <div *ngFor="let i of userList|searchPipe:searchQuery">
         <app-detailscard [user]="i"></app-detailscard>
     </div>
 </div>

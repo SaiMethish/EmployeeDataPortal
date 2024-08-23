@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { Router } from '@angular/router';
+import { DataService } from 'src/app/service/data/data.service';
 import { UserService } from 'src/app/service/user/user.service';
 
 @Component({
@@ -9,9 +10,10 @@ import { UserService } from 'src/app/service/user/user.service';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor(private userService:UserService, private router:Router) { }
+  constructor(private userService:UserService, private router:Router, private dataService:DataService) { }
   userList:any=[];
   userdept:string='';
+  searchQuery:any;
   ngOnInit(): void {
     let user:any=localStorage.getItem("user");
     if(user==null){
@@ -31,7 +33,10 @@ export class DashboardComponent implements OnInit {
       },
       error:err=>console.log(err),
       complete:()=>{}
+    });
+    this.dataService.currentMessage.subscribe((message)=>{
+      console.log(message);
+      this.searchQuery=message;
     })
   }
-
 }

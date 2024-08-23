@@ -1,8 +1,69 @@
-.dashboard{
+
+
+.dashboard {
     margin-top: 5%;
     margin-left: 5%;
     display: grid;
     grid-template-columns: 30% 30% 30%;
     width: 80%;
     height: auto;
+}
+
+@media(max-width:450px){
+    
+  }
+
+/* Styles for small devices (phones, portrait) */
+@media only screen and (max-width: 600px) {
+    .dashboard {
+        grid-template-columns: 100%;
+        margin-left: 0;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        *{
+            margin: 2%;
+        }
+    }
+
+}
+
+/* Styles for medium devices (tablets, landscape) */
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+    .dashboard {
+        grid-template-columns: 50% 50%;
+        margin-left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    *{
+        margin-left: 3%;
+    }
+
+
+}
+
+/* Styles for large devices (desktops) */
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+    .dashboard {
+        grid-template-columns: 33% 33% 33%;
+        margin-left: 5%;
+        width: 90%;
+    }
+
+
+}
+
+/* Styles for extra large devices (large desktops) */
+@media only screen and (min-width: 992px) {
+    .dashboard {
+        grid-template-columns: 25% 25% 25% 25%;
+        margin-left: 5%;
+        width: 80%;
+        *{
+            margin-left: 3%;
+        }
+    }
+
+  
 }
